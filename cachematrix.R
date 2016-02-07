@@ -31,11 +31,11 @@ cacheSolve <- function(x, ...) {
         inv <- x$getInverse()
         if(!is.null(inv)) {
                 message("beep boop beep boop getting the cached datas")
-                return(inv)
+                return(inv);
         }
         # Take the red pill neo
         neo <- x$get()
-        inv <- solve(neo)
+        inv <- solve(neo, ...)
         x$setInverse(inv)
         return(inv)
 }
